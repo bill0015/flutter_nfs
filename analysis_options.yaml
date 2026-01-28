@@ -1,0 +1,8 @@
+include: package:flutter_lints/flutter.yaml
+
+linter:
+  rules:
+    avoid_print: false
+    # libnfs FFI bindings use C naming conventions
+    non_constant_identifier_names: false
+    constant_identifier_names: false
