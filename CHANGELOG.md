@@ -1,3 +1,7 @@
+## 1.0.1
+*   Fixed documentation comments and analysis issues.
+*   Improved pub.dev score.
+
 ## 1.0.0
 *   Renamed package to `flutter_nfs`.
 *   Added comprehensive write support (`write`, `createFile`, `truncate`, `fsync`).

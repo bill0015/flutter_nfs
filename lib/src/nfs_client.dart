@@ -109,7 +109,7 @@ class NfsNativeClient {
   String _safeToString(Pointer<Utf8> ptr) {
     if (ptr == nullptr) return '';
     int len = 0;
-    while (ptr.cast<Uint8>().elementAt(len).value != 0) {
+    while (ptr.cast<Uint8>()[len] != 0) {
       len++;
     }
     final bytes = ptr.cast<Uint8>().asTypedList(len);

@@ -1,6 +1,6 @@
 name: flutter_nfs
 description: "High-performance NFS client for Flutter with zero-copy optimizations, powered by libnfs."
-version: 1.0.0
+version: 1.0.1
 repository: https://github.com/bill0015/flutter_nfs
 issue_tracker: https://github.com/bill0015/flutter_nfs/issues
 

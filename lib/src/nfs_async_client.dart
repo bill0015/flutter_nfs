@@ -72,11 +72,11 @@ class NfsClient {
   }
 
   /// List directory contents.
-  /// Returns List of Map<String, dynamic> representing entries.
+  /// Returns List of `Map<String, dynamic>` representing entries.
   /// (We return primitive maps to ensure isolate safety, wrapper can convert to NfsEntry if needed,
-  /// but for now let's return List<NfsEntry> and handle serialization in worker).
+  /// but for now let's return `List<NfsEntry>` and handle serialization in worker).
   /// Wait, sending NfsEntry is fine if it's simple POJO.
-  /// Let's return List<NfsEntry>.
+  /// Let's return `List<NfsEntry>`.
   Future<List<NfsEntry>> listDir(String path) async {
     final result = await _sendRequest('listDir', {'path': path});
     // The result comes back as List<dynamic> (maps) likely if we serialize?
@@ -170,7 +170,9 @@ void _nfsInternalWorker(SendPort mainPort) {
 
     try {
       if (cmd == 'dispose') {
-        for (var f in openFiles.values) f.close();
+        for (var f in openFiles.values) {
+          f.close();
+        }
         client?.dispose();
         receivePort.close();
         return;
