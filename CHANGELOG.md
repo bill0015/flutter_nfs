@@ -1,4 +1,4 @@
-## 0.2.0
+## 1.0.0
 *   Renamed package to `flutter_nfs`.
 *   Added comprehensive write support (`write`, `createFile`, `truncate`, `fsync`).
 *   Added file management operations (`delete`, `mkdir`, `rmdir`, `rename`, `chmod`, `chown`).
